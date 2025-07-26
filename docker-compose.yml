@@ -1,0 +1,9 @@
+version: '3.9'
+
+services:
+  portafolio:
+    build: .
+    container_name: portafolio
+    ports:
+      - "80:80"
+    restart: always
