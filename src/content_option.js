@@ -11,13 +11,13 @@ const introdata = {
         second: "Enfocado en la mejora continua",
         third: "Buscador de la innovación",
     },
-    description: "Ingeniero en Sistemas Computacionales con más de 4 años de experiencia en desarrollo de software. Apasionado por la tecnología, con habilidades autodidactas y orientado a la mejora continua. Experiencia en una amplia variedad de tecnologías y en la migración de aplicaciones a la nube. Busco constantemente nuevos retos para expandir mis habilidades.",
+    description: "Ingeniero en Sistemas Computacionales con más de 5 años de experiencia en desarrollo de software. Apasionado por la tecnología, con habilidades autodidactas y orientado a la mejora continua. Experiencia en una amplia variedad de tecnologías y en la migración de aplicaciones a la nube. Busco constantemente nuevos retos para expandir mis habilidades.",
     your_img_url: "/perfil.jpg",
 };
 
 const dataabout = {
     title: "Descripcion",
-    aboutme: "Ingeniero en Sistemas Computacionales con más de 4 años de experiencia en desarrollo de software. Apasionado por la tecnología, con habilidades autodidactas y orientado a la mejora continua. Experiencia en una amplia variedad de tecnologías y en la migración de aplicaciones a la nube. Busco constantemente nuevos retos para expandir mis habilidades.",
+    aboutme: "Ingeniero en Sistemas Computacionales con más de 5 años de experiencia en desarrollo de software. Apasionado por la tecnología, con habilidades autodidactas y orientado a la mejora continua. Experiencia en una amplia variedad de tecnologías y en la migración de aplicaciones a la nube. Busco constantemente nuevos retos para expandir mis habilidades.",
 };
 const worktimeline = [{
         jobtitle: "Fullstack developer",
