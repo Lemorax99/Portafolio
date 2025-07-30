@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import * as emailjs from "emailjs-com";
+import emailjs from '@emailjs/browser';
 import "./style.css";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import { meta } from "../../content_option";
@@ -22,46 +22,39 @@ export const ContactUs = () => {
     setFormdata({ loading: true });
 
     const templateParams = {
-      from_name: formData.email,
-      user_name: formData.name,
-      to_name: contactConfig.YOUR_EMAIL,
+      email: formData.email,
+      name: formData.name, 
       message: formData.message,
-    };
+      title: contactConfig.TITLE
+    }; 
 
-    setFormdata({
+    emailjs
+      .send(
+        contactConfig.YOUR_SERVICE_ID,
+        contactConfig.YOUR_TEMPLATE_ID,
+        templateParams,
+        contactConfig.YOUR_USER_ID
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          setFormdata({
             loading: false,
-            alertmessage: "Envio exitoso! ,Gracias por tu mensaje estaremos en conatcto",
+            alertmessage: "Envio Exitoso! ,gracias por tu mensaje",
             variant: "success",
             show: true,
           });
-
-    // emailjs
-    //   .send(
-    //     contactConfig.YOUR_SERVICE_ID,
-    //     contactConfig.YOUR_TEMPLATE_ID,
-    //     templateParams,
-    //     contactConfig.YOUR_USER_ID
-    //   )
-    //   .then(
-    //     (result) => {
-    //       console.log(result.text);
-    //       setFormdata({
-    //         loading: false,
-    //         alertmessage: "SUCCESS! ,Thankyou for your messege",
-    //         variant: "success",
-    //         show: true,
-    //       });
-    //     },
-    //     (error) => {
-    //       console.log(error.text);
-    //       setFormdata({
-    //         alertmessage: `Faild to send!,${error.text}`,
-    //         variant: "danger",
-    //         show: true,
-    //       });
-    //       document.getElementsByClassName("co_alert")[0].scrollIntoView();
-    //     }
-    //   );
+        },
+        (error) => {
+          console.log(error);
+          setFormdata({
+            alertmessage: `Fallo en el envio!,${error}`,
+            variant: "danger",
+            show: true,
+          });
+          document.getElementsByClassName("co_alert")[0].scrollIntoView();
+        }
+      );
   };
 
   const handleChange = (e) => {

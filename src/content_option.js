@@ -12,7 +12,7 @@ const introdata = {
         third: "Buscador de la innovación",
     },
     description: "Ingeniero en Sistemas Computacionales con más de 5 años de experiencia en desarrollo de software. Apasionado por la tecnología, con habilidades autodidactas y orientado a la mejora continua. Experiencia en una amplia variedad de tecnologías y en la migración de aplicaciones a la nube. Busco constantemente nuevos retos para expandir mis habilidades.",
-    your_img_url: "/perfil.jpg",
+    your_img_url: "images/perfil.jpg",
 };
 
 const dataabout = {
@@ -148,9 +148,10 @@ const contactConfig = {
     YOUR_EMAIL: "raulvillarrealmora.dev@gmail.com",
     YOUR_FONE: "(332)159-3042",
     description: "Construyo aplicaciones web funcionales y eficientes usando tecnologías como JavaScript, Python y C#. Aquí muestro algunos de mis proyectos más destacados.", 
-    YOUR_SERVICE_ID: "service_id",
-    YOUR_TEMPLATE_ID: "template_id",
-    YOUR_USER_ID: "user_id",
+    YOUR_SERVICE_ID: "service_ijlv2y8",
+    YOUR_TEMPLATE_ID: "template_jgr2cjj",
+    TITLE: "Contacto desde portafolio",
+    YOUR_USER_ID: "6ubTi2hN8eQkJaDrO"
 };
 
 const socialprofils = {
